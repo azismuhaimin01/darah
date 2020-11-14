@@ -1,3 +1,6 @@
+<?php
+  $halaman="about";
+?>
 <!DOCTYPE html>
 <html lang="en">
 

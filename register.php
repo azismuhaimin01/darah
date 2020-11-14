@@ -1,3 +1,6 @@
+<?php
+  $halaman="register";
+?>
 <!DOCTYPE html>
 <html lang="en">
 

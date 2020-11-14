@@ -1,3 +1,6 @@
+<?php
+  $halaman="armada";
+?>
 <!DOCTYPE html>
 <html lang="en">
 

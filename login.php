@@ -1,3 +1,6 @@
+<?php
+  $halaman="login";
+?>
 <!DOCTYPE html>
 <html lang="en">
 

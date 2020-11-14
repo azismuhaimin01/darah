@@ -1,3 +1,6 @@
+<?php
+  $halaman="galeri";
+?>
 <!DOCTYPE html>
 <html lang="en">
 

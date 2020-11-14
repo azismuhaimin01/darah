@@ -1,3 +1,6 @@
+<?php
+  $halaman="kontak";
+?>
 <!DOCTYPE html>
 <html lang="en">
 
