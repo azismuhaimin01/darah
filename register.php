@@ -48,59 +48,63 @@
   <!-- End Header -->
 
   <!-- ======= Galeri Section ======= -->
-    <section id="register" class="register">
-      <div class="container">
-
-        <div class="section-title" data-aos="fade-up">
-          <center><h1>DAFTAR</h1></center>
-        
-          <div class="row register-container" data-aos="fade-up">
-            <form>
-
-              <div class="form-row">
-                <div class="form-group col-md-6">
-                  <label for="inputEmail4">Nama Lengkap</label>
-                  <input type="email" class="form-control" id="inputEmail4" placeholder="Ketik Nama Lengkap">
-                </div>
-                <div class="form-group col-md-6">
-                  <label for="inputEmail4">Email</label>
-                  <input type="email" class="form-control" id="inputEmail4" placeholder="Masukkan Email">
-                </div>
+    <section>
+      <div class="container mt-5">
+        <div class="row">
+          <div class="col-lg-6 offset-lg-3">
+            <div class="card shadow-lg">
+              <div class="card-header">
+                PENDAFTARAN
               </div>
-
-              <div class="form-row">
-                <div class="form-group col-md-6">
-                  <label for="inputPassword4">Password</label>
-                  <input type="password" class="form-control" id="inputpassword" placeholder="Ketik Password">
+              <div class="card-body">
+              <form>
+                <div class="form-group">
+                  <div class="form-row">
+                    <div class="col">
+                      <label for="namalengkap">Nama Lengkap</label>
+                      <input type="text" class="form-control" placeholder="Nama Lengkap">
+                    </div>
+                    <div class="col">
+                      <label for="emailaddress">Email Address</label>
+                      <input type="email" class="form-control" placeholder="Email Address">
+                    </div>
+                  </div>
                 </div>
-                <div class="form-group col-md-6">
-                  <label for="inputPassword4">Konfirmasi Password</label>
-                  <input type="password" class="form-control" id="Konfirmasipassword" placeholder="Konfirmasi Password">
+                <div class="form-group">
+                  <label for="alamat">Alamat</label>
+                  <textarea class="form-control" id="alamat" rows="3"></textarea>
                 </div>
+                <div class="form-group">
+                  <div class="form-row">
+                    <div class="col">
+                      <label for="namalengkap">Nomor Telepon</label>
+                      <input type="text" class="form-control" placeholder="Nama Lengkap">
+                    </div>
+                    <div class="col">
+                      <label for="jeniskelamin">Jenis Kelamin</label>
+                      <select class="form-control" id="jeniskelamin">
+                        <option value="L">Laki-laki</option>
+                        <option value="P">Perempuan</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <div class="form-row">
+                    <div class="col">
+                      <label for="password">Password</label>
+                      <input type="password" class="form-control" placeholder="Password">
+                    </div>
+                    <div class="col">
+                      <label for="konfirm">Konfirmasi Password</label>
+                      <input type="password" class="form-control" placeholder="Konfirmasi Password">
+                    </div>
+                  </div>
+                </div>
+                <button type="submit" name="daftar" class="btn btn-primary">Daftar Segera</button>
+              </form>
               </div>
-
-              <div class="form-group">
-                <label for="inputAddress2">Alamat</label>
-                <input type="text" class="form-control" id="inputAddress2" placeholder="Masukkan Alamat Anda">
-              </div>
-
-              <div class="form-row">
-                <div class="form-group col-md-6">
-                  <label for="inputCity">No Telpon</label>
-                  <input type="text" class="form-control" id="inputCity" placeholder="Masukkan No Telpon">
-                </div>
-                <div class="form-group col-md-6">
-                  <label for="inputState">Kelamin</label>
-                  <select id="inputState" class="form-control">
-                    <option selected>Pilih Jenis Kelamin</option>
-                    <option>Laki-laki</option>
-                    <option>Perempuan</option>
-                  </select>
-                </div>
-              </div>
-  </div>
-  <button type="submit" class="btn btn-primary">Daftar Sekarang</button>
-</form>
+            </div>
           </div>
         </div>
       </div>

@@ -913,22 +913,12 @@ font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica N
 # Login Css
 --------------------------------------------------------------*/
 .login {
-  padding: 120px 0;
   background: #008080;
   width: 100%;
   height: 92.3vh;
 }
 
 .login .container {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background: rgba(0, 0, 0, 0);
-  padding: 20px;
-  width: 270px;
-  font-size: 30px;
-  box-shadow: 0 0 10px 5px black;
 }
 
 .login .login-form label{
@@ -956,22 +946,8 @@ font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica N
 --------------------------------------------------------------*/
 #register {
   padding: 120px 0;
-  background: #008080;
   width: 100%;
   height: 92.3vh;
-}
-
-.register .container {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background: rgba(0, 0, 0, 0,);
-  padding: 30px;
-  width: 500px;
-  height: 500px;
-  font-size: 15px;
-  box-shadow: 0 0 10px 5px black;
 }
 
 .register .register-form label {

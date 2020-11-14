@@ -44,37 +44,27 @@
 
     <!-- ======= Galeri Section ======= -->
     <section id="login" class="login">
-      <div class="container">
-
-        <div class="section-title" data-aos="fade-up">
-          <center><h1>LOGIN</h1></center>
-
-          <div class="row login-container"data-aos="fade-up">
-            <form action="data.php" method="post" class="login-form">
-              <div class="form-group">
-                <label for="">Username</label>
-                <input type="text" name="username" class="form-group">
+      <div class="container" style="margin-top:100px">
+        <div class="row">
+          <div class="col-lg-4 offset-lg-4">
+            <div class="card">
+              <div class="card-body">
+                <h2>Login Account</h2>
+                 <form>
+                    <div class="form-group">
+                      <label for="exampleInputEmail1">Email address</label>
+                      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                    </div>
+                    <div class="form-group">
+                      <label for="exampleInputPassword1">Password</label>
+                      <input type="password" class="form-control" id="exampleInputPassword1">
+                    </div>
+                    <button type="submit" class="btn btn-success btn-block">Login</button>
+                    <button type="submit" class="btn btn-primary btn-block">Registrasi</button>
+                  </form>
               </div>
-              <div class="form-group">
-                <label for="">Password</label>
-                <input type="Password" name="password" class="form-group">
-              </div>
-            </form>
-            <a href="">
-            <button type="submit" class="btn btn-primary" name="btnlogin">
-                    Login
-                </button>
-            </a>
-            <a href="register.php">
-              <button type="submit" name="register" class="btn btn-success">
-                Daftar
-              </button>
-            </a>
-            <a href="index.php">
-              <button type="submit" name="index" class="btn btn-secondary">
-                  Kembali
-              </button>
-            </a>
+            </div>
+         
           </div>
         </div>
       </div>
