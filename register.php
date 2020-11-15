@@ -1,5 +1,30 @@
 <?php
   $halaman="register";
+  include("koneksi.php");
+
+  if(isset($_POST['daftar'])){
+    $nama_lengkap = $_POST['nama_lengkap'];
+    $email = $_POST['email'];
+    $alamat = $_POST['alamat'];
+    $no_telepon = $_POST['no_telepon'];
+    $jenis_kelamin = $_POST['jenis_kelamin'];
+    $password = $_POST['password'];
+    $konfirmasi_password = $_POST['konfirmasi_password'];
+
+    // cek kesamaan password
+    if($password != $konfirmasi_password){
+      echo "<script>alert('Password tidak match !');window.location.href='register.php';</script>";
+    }else{
+      $query = mysqli_query($koneksi,"INSERT INTO users(nama_lengkap,email,alamat,no_telepon,jenis_kelamin,passwords,level,is_Active) VALUES('$nama_lengkap','$email','$alamat','$no_telepon','$jenis_kelamin',md5('$password'),'0','1')");
+
+      if($query){
+        echo "<script>alert('Proses Registrasi Berhasil, Silahkan Login !');window.location.href='login.php';</script>";
+      }else{
+        echo "<script>alert('Registrasi Gagal !');window.location.href='register.php';</script>";
+      }
+    }
+
+  }
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -57,32 +82,32 @@
                 PENDAFTARAN
               </div>
               <div class="card-body">
-              <form>
+              <form method="post" action="">
                 <div class="form-group">
                   <div class="form-row">
                     <div class="col">
                       <label for="namalengkap">Nama Lengkap</label>
-                      <input type="text" class="form-control" placeholder="Nama Lengkap">
+                      <input type="text" class="form-control" name="nama_lengkap" placeholder="Nama Lengkap" required>
                     </div>
                     <div class="col">
                       <label for="emailaddress">Email Address</label>
-                      <input type="email" class="form-control" placeholder="Email Address">
+                      <input type="email" class="form-control" name="email" placeholder="Email Address" required>
                     </div>
                   </div>
                 </div>
                 <div class="form-group">
                   <label for="alamat">Alamat</label>
-                  <textarea class="form-control" id="alamat" rows="3"></textarea>
+                  <textarea class="form-control" id="alamat" name="alamat" rows="3" required></textarea>
                 </div>
                 <div class="form-group">
                   <div class="form-row">
                     <div class="col">
                       <label for="namalengkap">Nomor Telepon</label>
-                      <input type="text" class="form-control" placeholder="Nama Lengkap">
+                      <input type="number" class="form-control" name="no_telepon" placeholder="Nama Lengkap" required>
                     </div>
                     <div class="col">
                       <label for="jeniskelamin">Jenis Kelamin</label>
-                      <select class="form-control" id="jeniskelamin">
+                      <select class="form-control" id="jeniskelamin" name="jenis_kelamin" required>
                         <option value="L">Laki-laki</option>
                         <option value="P">Perempuan</option>
                       </select>
@@ -93,11 +118,11 @@
                   <div class="form-row">
                     <div class="col">
                       <label for="password">Password</label>
-                      <input type="password" class="form-control" placeholder="Password">
+                      <input type="password" class="form-control" name="password" placeholder="Password" required>
                     </div>
                     <div class="col">
                       <label for="konfirm">Konfirmasi Password</label>
-                      <input type="password" class="form-control" placeholder="Konfirmasi Password">
+                      <input type="password" class="form-control" name="konfirmasi_password" placeholder="Konfirmasi Password" required>
                     </div>
                   </div>
                 </div>

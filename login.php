@@ -1,5 +1,38 @@
 <?php
   $halaman="login";
+  include("koneksi.php");
+  session_start();
+
+  $errorData = "";
+  if(isset($_POST['login'])){
+    $email_address = $_POST['email_address'];
+    $password = $_POST['password'];
+
+    $query = mysqli_query($koneksi, "SELECT * FROM users WHERE email='$email_address' AND passwords=md5('$password')");
+    $count = mysqli_num_rows($query);
+
+    if($count > 0){
+      $data = mysqli_fetch_assoc($query);
+			
+			if($data['level'] == 1){
+				$_SESSION['email'] = $email_address;
+				$_SESSION['role'] = "admin";
+				
+				echo "<script>alert('Login Admin Berhasil !');window.location.href = 'halaman/admin/dashboard.php';</script>";
+			}else if($data['level'] == 0){
+				$_SESSION['email'] = $email_address;
+				$_SESSION['role'] = "pemesan";
+
+				echo "<script>alert('Login Pemesan Berhasil !');window.location.href = 'halaman/pemesan/dashboard.php';</script>";
+			}else{
+				header("location:index.php?pesan=Kesalahan Proses Gagal");
+			}
+    }else{
+			$errorData = "Data tidak terdaftar !";
+		}
+
+  }
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -49,18 +82,26 @@
           <div class="col-lg-4 offset-lg-4">
             <div class="card">
               <div class="card-body">
+              <?php if($errorData != null){ ?>
+              <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                <strong><?= $errorData ?></strong>
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <?php } ?>
                 <h2>Login Account</h2>
-                 <form>
+                 <form action="" method="post">
                     <div class="form-group">
-                      <label for="exampleInputEmail1">Email address</label>
-                      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                      <label for="email_address">Email address</label>
+                      <input type="email" class="form-control" id="email_address" name="email_address" aria-describedby="emailHelp" required>
                     </div>
                     <div class="form-group">
-                      <label for="exampleInputPassword1">Password</label>
-                      <input type="password" class="form-control" id="exampleInputPassword1">
+                      <label for="password">Password</label>
+                      <input type="password" class="form-control" id="password" name="password" required>
                     </div>
-                    <button type="submit" class="btn btn-success btn-block">Login</button>
-                    <button type="submit" class="btn btn-primary btn-block">Registrasi</button>
+                    <button type="submit" name="login" class="btn btn-success btn-block">Login</button>
+                    <a href="register.php" class="btn btn-primary btn-block">Registrasi</a>
                   </form>
               </div>
             </div>

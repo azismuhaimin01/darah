@@ -8,7 +8,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Dewi Permata Trans | home</title>
+  <title>Dewi Permata Trans | Home</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -51,7 +51,7 @@
           <h3>Ayo daftar dan bergabung menjadi pelanggan untuk mendapatkan penawaran harga terbaik serta jaminan kepuasan pelayanan yang menyeluruh.</h3>
           <div class="d-lg-flex">
             <a href="register.php" class="btn-get-started scrollto">DAFTAR SEGERA</a>
-            <a href="login.php" class="btn-get-started scrollto">LOGIN</a>
+            <a href="login.php" class="btn-get-started scrollto ml-2">LOGIN</a>
           </div>
         </div>
         <div class="col-lg-6 order-1 order-lg-2 hero-img" data-aos="zoom-in" data-aos-delay="200">
