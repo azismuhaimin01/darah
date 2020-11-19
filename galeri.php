@@ -64,7 +64,7 @@
               <h4>App 1</h4>
               <p>App</p>
               <a href="assets/img/portfolio/portfolio-1.jpg" data-gall="galeriGallery" class="venobox preview-link" title="App 1"><i class="bx bx-plus"></i></a>
-              <a href="galeri-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+              <a href="galeri-details.html" style="width: 600px; height: 400px;" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
             </div>
           </div>
 

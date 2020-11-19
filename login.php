@@ -75,10 +75,11 @@
   ?>
   <!-- End Header -->
 
-    <!-- ======= Galeri Section ======= -->
+
+    <!-- ======= Login Section ======= -->
     <section id="login" class="login">
       <div class="container" style="margin-top:100px">
-        <div class="row">
+        <div class="row" data-aos="fade-up">
           <div class="col-lg-4 offset-lg-4">
             <div class="card">
               <div class="card-body">
@@ -90,7 +91,7 @@
                 </button>
               </div>
               <?php } ?>
-                <h2>Login Account</h2>
+                <h2>LOGIN ACCOUNT</h2>
                  <form action="" method="post">
                     <div class="form-group">
                       <label for="email_address">Email address</label>
@@ -109,7 +110,7 @@
           </div>
         </div>
       </div>
-    </section><!-- End Galeri Section -->
+    </section><!-- End Login Section -->
 
   <!-- ======= Footer ======= -->
   <?php

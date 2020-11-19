@@ -13,7 +13,7 @@
 
     // cek kesamaan password
     if($password != $konfirmasi_password){
-      echo "<script>alert('Password tidak match !');window.location.href='register.php';</script>";
+      echo "<script>alert('Password tidak Cocok !');window.location.href='register.php';</script>";
     }else{
       $query = mysqli_query($koneksi,"INSERT INTO users(nama_lengkap,email,alamat,no_telepon,jenis_kelamin,passwords,level,is_Active) VALUES('$nama_lengkap','$email','$alamat','$no_telepon','$jenis_kelamin',md5('$password'),'0','1')");
 
@@ -79,7 +79,8 @@
           <div class="col-lg-6 offset-lg-3">
             <div class="card shadow-lg">
               <div class="card-header">
-                PENDAFTARAN
+                <h2>PENDAFTARAN
+                <a href="index.php" class="btn btn-secondary offset-lg-4">Kembali</a></h2>
               </div>
               <div class="card-body">
               <form method="post" action="">
@@ -87,27 +88,27 @@
                   <div class="form-row">
                     <div class="col">
                       <label for="namalengkap">Nama Lengkap</label>
-                      <input type="text" class="form-control" name="nama_lengkap" placeholder="Nama Lengkap" required>
+                      <input type="text" class="form-control" name="nama_lengkap" placeholder="Masukkan Nama Lengkap" required>
                     </div>
                     <div class="col">
                       <label for="emailaddress">Email Address</label>
-                      <input type="email" class="form-control" name="email" placeholder="Email Address" required>
+                      <input type="email" class="form-control" name="email" placeholder="Masukkan Email" required>
                     </div>
                   </div>
                 </div>
                 <div class="form-group">
                   <label for="alamat">Alamat</label>
-                  <textarea class="form-control" id="alamat" name="alamat" rows="3" required></textarea>
+                  <textarea class="form-control" id="alamat" name="alamat"placeholder="Masukkan Alamat Lengkap Anda" rows="3" required></textarea>
                 </div>
                 <div class="form-group">
                   <div class="form-row">
                     <div class="col">
                       <label for="namalengkap">Nomor Telepon</label>
-                      <input type="number" class="form-control" name="no_telepon" placeholder="Nama Lengkap" required>
+                      <input type="number" class="form-control" name="no_telepon" placeholder="Masukkan Nomor Telepon" required>
                     </div>
                     <div class="col">
-                      <label for="jeniskelamin">Jenis Kelamin</label>
-                      <select class="form-control" id="jeniskelamin" name="jenis_kelamin" required>
+                      <label for="jeniskelamin">Pilih Jenis Kelamin</label>
+                      <select class="form-control" id="jeniskelamin" name="jenis_kelamin" placeholder="Pilih jenis Kelamin" required>
                         <option value="L">Laki-laki</option>
                         <option value="P">Perempuan</option>
                       </select>
@@ -118,7 +119,7 @@
                   <div class="form-row">
                     <div class="col">
                       <label for="password">Password</label>
-                      <input type="password" class="form-control" name="password" placeholder="Password" required>
+                      <input type="password" class="form-control" name="password" placeholder="Buat Password" required>
                     </div>
                     <div class="col">
                       <label for="konfirm">Konfirmasi Password</label>
@@ -126,7 +127,11 @@
                     </div>
                   </div>
                 </div>
-                <button type="submit" name="daftar" class="btn btn-primary">Daftar Segera</button>
+                <div><
+                  <button type="submit" name="daftar" class="btn btn-primary">Daftar Segera</button>
+                  <button type="reset" name="daftar" class="btn btn-danger">Hapus</button>
+                  <a href="login.php" class="btn btn-success">Login</a>
+                </div>
               </form>
               </div>
             </div>
@@ -137,9 +142,9 @@
 <!-- End Galeri Section -->
 
 <!-- ======= Footer ======= -->
-  <?php
-  include("footer.php");
-  ?>
+<?php
+include("footer.php");
+?>
 <!-- End Footer -->
 
   <a href="#" class="back-to-top"><i class="ri-arrow-up-line"></i></a>
