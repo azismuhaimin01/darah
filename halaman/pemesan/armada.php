@@ -57,7 +57,7 @@
 
         <div class="section-title">
           <h1>Tipe Armada</h1>
-          <strong><p>Kami menyediakan armada bus pariwisata mewah dengan berbagai fasilitas dikelasnya, mulai dari vip class hingga luxury class yang siap menemani perjalanan anda sehingga menghadirkan rasa nyaman dan berkesan.</p></strong>
+          <p>Kami menyediakan armada bus pariwisata mewah dengan berbagai fasilitas dikelasnya, mulai dari vip class hingga luxury class yang siap menemani perjalanan anda sehingga menghadirkan rasa nyaman dan berkesan.</p>
         </div>
 
         <div class="row team-container">
