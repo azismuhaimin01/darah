@@ -384,6 +384,7 @@ font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica N
 # Home Index
 --------------------------------------------------------------*/
 #index {
+  padding: 120px 0px;
   width: 100%;
   height: 92.3vh;
   background: #008080;
@@ -433,7 +434,7 @@ font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica N
 
 @media (max-width: 768px) {
   #index h1 {
-    font-size: 20x;
+    font-size: 20px;
     line-height: 24px;
   }
   #index h2 {
@@ -441,7 +442,7 @@ font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica N
     line-height: 36px;
   }
   #index h3 {
-    font-size: 15x;
+    font-size: 15px;
     line-height: 24px;
     margin-bottom: 30px;
   }
@@ -651,6 +652,9 @@ font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica N
 
 .team .member .member-info {
   padding-left: 30px;
+}
+.team .member .member-info .icofont{
+  size: 20px;
 }
 
 .team .member h4 {
@@ -1079,7 +1083,7 @@ font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica N
 }
 
 /*--------------------------------------------------------------
-# user
+# user dashboard
 --------------------------------------------------------------*/
 #user{
   padding: 120px 0;
@@ -1088,15 +1092,69 @@ font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica N
   height: 92.3vh;
 }
 
+#user .container {
+  padding-top: 72px;
+}
+
+#user h1 {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 25px;
+  color: #ffc107;
+}
+
+#user h2 {
+  margin: 0 0 10px 0;
+  font-size: 50px;
+  font-weight: 700;
+  line-height: 56px;
+  color: #fff;
+}
+
+#user h3 {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 22px;
+  color: #fff;
+}
+#user h4 {
+  color: rgba(255, 255, 255, 0.6);
+  margin-bottom: 30px;
+  font-size: 18px;
+  color: #fff;
+}
+
 .col-2 {
   width: -webkit-calc((100% - 20px) / 2);
   width: -moz-calc((100% - 20px) / 2);
   width: calc((100% - 20px) / 2);
 }
 
-/* ==========================================================================
-   #DATEPICKER
-   ========================================================================== */
+@-webkit-keyframes up-down {
+  0% {
+    transform: translateY(10px);
+  }
+  100% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes up-down {
+  0% {
+    transform: translateY(10px);
+  }
+  100% {
+    transform: translateY(-10px);
+  }
+}
+
+
+/*--------------------------------------------------------------
+# user
+--------------------------------------------------------------*/
+.icofont
+
+/*--------------------------------------------------------------
+# DatePicker
+--------------------------------------------------------------*/
 .daterangepicker {
   display: none;
   width: 790px;
@@ -1322,27 +1380,7 @@ section {
   color: #fff;
 }
 
-.section-title h1::before {
-  content: '';
-  position: absolute;
-  display: block;
-  width: 120px;
-  height: 1px;
-  background: #ddd;
-  bottom: 1px;
-  left: calc(50% - 60px);
-}
 
-.section-title h1::after {
-  content: '';
-  position: absolute;
-  display: block;
-  width: 40px;
-  height: 3px;
-  background: #47b2e4;
-  bottom: 0;
-  left: calc(50% - 20px);
-}
 
 
 /*--------------------------------------------------------------

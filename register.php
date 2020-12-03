@@ -13,7 +13,7 @@
 
     // cek kesamaan password
     if($password != $konfirmasi_password){
-      echo "<script>alert('Password tidak Cocok !');window.location.href='register.php';</script>";
+      echo "<script>alert('Password tidak match !');window.location.href='register.php';</script>";
     }else{
       $query = mysqli_query($koneksi,"INSERT INTO users(nama_lengkap,email,alamat,no_telepon,jenis_kelamin,passwords,level,is_Active) VALUES('$nama_lengkap','$email','$alamat','$no_telepon','$jenis_kelamin',md5('$password'),'0','1')");
 
@@ -33,7 +33,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Dewi Permata Trans | Register</title>
+  <title>PO. Dewi Permata | Register</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -72,7 +72,7 @@
   ?>
   <!-- End Header -->
 
-  <!-- ======= Galeri Section ======= -->
+  <!-- ======= Daftar ======= -->
     <section>
       <div class="container mt-5">
         <div class="row">
@@ -80,7 +80,6 @@
             <div class="card shadow-lg">
               <div class="card-header">
                 <h2>PENDAFTARAN
-                <a href="index.php" class="btn btn-secondary offset-lg-4">Kembali</a></h2>
               </div>
               <div class="card-body">
               <form method="post" action="">
@@ -127,10 +126,10 @@
                     </div>
                   </div>
                 </div>
-                <div><
+                <div> <center>
                   <button type="submit" name="daftar" class="btn btn-primary">Daftar Segera</button>
                   <button type="reset" name="daftar" class="btn btn-danger">Hapus</button>
-                  <a href="login.php" class="btn btn-success">Login</a>
+                  <a href="login.php" class="btn btn-success">Login</a></center>
                 </div>
               </form>
               </div>
@@ -139,7 +138,7 @@
         </div>
       </div>
     </section>
-<!-- End Galeri Section -->
+<!-- End Daftar Section -->
 
 <!-- ======= Footer ======= -->
 <?php

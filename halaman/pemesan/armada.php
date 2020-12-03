@@ -1,5 +1,5 @@
 <?php
-  $halaman="daftartunggu";
+  $halaman="tipe_armada";
 
   session_start();
   include("../../koneksi.php");
@@ -11,7 +11,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>PO. Dewi Permata | Daftar Tunggu</title>
+  <title>PO. Dewi Permata | Tipe Armada</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -50,46 +50,71 @@
   ?>
   <!-- End Header -->
 
-    <!-- ======= Contact Section ======= -->
-    <section id="tunggu" class="tunggu">
+
+    <!-- ======= Team Section ======= -->
+    <section id="team" class="team section-bg">
       <div class="container" data-aos="fade-up">
 
         <div class="section-title">
-          <h1>DAFTAR TUNGGU</h1>
+          <h1>Tipe Armada</h1>
+          <strong><p>Kami menyediakan armada bus pariwisata mewah dengan berbagai fasilitas dikelasnya, mulai dari vip class hingga luxury class yang siap menemani perjalanan anda sehingga menghadirkan rasa nyaman dan berkesan.</p></strong>
         </div>
 
+        <div class="row team-container">
+          <div class="col-lg-6">
+            <div class="member d-flex align-items-start" data-aos="zoom-in" data-aos-delay="100">
+              <div class="pic"><img src="../../assets/img/team/B.png" class="img-fluid" alt=""></div>
+              <div class="member-info">
+                <h4>VIP CLASS</h4>
+                <span>59 seat dengan konfigurasi 2-3</span>
+                <p>Jetbus 3+ HDD Buatan Adi Putro</p>
+              </div>
+            </div>
+          </div>
 
+          <div class="col-lg-6 mt-4 mt-lg-0">
+            <div class="member d-flex align-items-start" data-aos="zoom-in" data-aos-delay="200">
+              <div class="pic"><img src="../../assets/img/team/shd1.png" class="img-fluid" alt=""></div>
+              <div class="member-info">
+                <h4>EXECUTIVE CLASS</h4>
+                <span>47 seat dengan konfigurasi 2-2</span>
+                <p>Jetbus 3+ HDD Buatan Adi Putro</p>
+              </div>
+            </div>
+          </div>
 
-        <div class="content" data-aos="fade up">
-          <div class="card-body table-responsive p-0">
-            <table class="table table-bordered">
-              <thead>
-                <tr style="background-color: white">
-                  <th>No</th>
-                  <th>Nama</th>
-                  <th>No Telp</th>
-                  <th>Berangkat</th>
-                  <th>Alamat Berangkat</th>
-                  <th>Tujuan</th>
-                  <th>Alamat Tujuan</th>
-                  <th>Tipe Bus</th>
-                  <th>Tgl Mulai</th>
-                  <th>Jam Mulai</th>
-                  <th>Tgl Selesai</th>
-                  <th>Jam Selesai</th>               
-                </tr>
-              </thead>
-            </table>
+          <div class="col-lg-6 mt-4">
+            <div class="member d-flex align-items-start" data-aos="zoom-in" data-aos-delay="300">
+              <div class="pic"><img src="../../assets/img/team/shd.png" class="img-fluid" alt=""></div>
+              <div class="member-info">
+                <h4>SUPER EXECUTIVE CLASS</h4>
+                <span>32 seat dengan konfigurasi 2-2</span>
+                <p>Jetbus 3+ SHD Buatan Adi Putro</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6 mt-4">
+            <div class="member d-flex align-items-start" data-aos="zoom-in" data-aos-delay="400">
+              <div class="pic"><img src="../../assets/img/team/xhd.png" class="img-fluid" alt=""></div>
+              <div class="member-info">
+                <h4>SUPER LUXURY CLASS</h4>
+                <span>22 seat dengan konfigurasi 2-1</span>
+                <p>SR2 XHD Prime Buatan Laksana</p>
+              </div>
+            </div>
           </div>
         </div>
+
       </div>
-    </section><!-- End Contact Section -->
+    </section><!-- End Team Section -->
+
 
   <!-- ======= Footer ======= -->
   <?php
   include("footer.php");
   ?>
- <!-- End Footer -->
+  <!-- End Footer -->
 
   <a href="#" class="back-to-top"><i class="ri-arrow-up-line"></i></a>
   <div id="preloader"></div>

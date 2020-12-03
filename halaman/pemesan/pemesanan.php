@@ -1,8 +1,32 @@
 <?php
+$halaman="pemesanan";
 
-  $halaman="pemesanan";
+session_start();
+include("../../koneksi.php");
 
+if(isset($_POST['pemesanan'])) {
+    $nama_pemesan = $_POST['nama_pemesan'];
+    $telp = $_POST['telp'];
+    $berangkat = $_POST['berangkat'];
+    $almt_berangkat = $_POST['almt_berangkat'];
+    $tujuan = $_POST['tujuan'];
+    $almt_tujuan = $_POST['almt_tujuan'];
+    $tipe_bus = $_POST['tipe_bus'];
+    $tgl_mulai = $_POST['tgl_mulai'];
+    $jam_mulai = $_POST['jam_mulai'];
+    $tgl_selesai = $_POST['tgl_selesai'];
+    $jam_selesai = $_POST['jam_selesai'];
+
+
+    $query = mysqli_query($koneksi,"INSERT INTO pemesanan(nama_pemesan,telp,berangkat,almt_berangkat,tujuan,almt_tujuan,tipe_bus,tgl_mulai,jam_mulai,tgl_selesai,jam_selesai) VALUES('$nama_pemesan','$telp','$berangkat','$almt_berangkat','$tujuan','$almt_tujuan','$tipe_bus','$tgl_mulai','$jam_mulai','$tgl_selesai','$jam_selesai')");
+    if($query) {
+      echo "<script>alert('Proses Pemesanan Berhasil, Tunggu Konfirmasi !');window.location.href='daftartunggu.php';</script>";
+    }else{
+      echo "<script>alert('Pemesanan Gagal !');window.location.href='pemesanan.php';</script>";
+    }
+  }
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -10,7 +34,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Dewi Permata Trans | Pemesanan</title>
+  <title>PO. Dewi Permata | Pemesanan</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -65,52 +89,90 @@
                 <form method="post" action="">
 
                   <div class="form-group">
-                    <label for="berangkat">Jemput</label>
-                    <select name="kota" class="form-control" style="width: 100%; height: 40px;" required>
+                    <div class="form-row">
+                      <div class="col">
+                        <strong><label for="nama_pemesan">Nama Pemesan</label></strong>
+                        <input type="text" class="form-control" name="nama_pemesan" placeholder="Masukkan nama lengkap" required>
+                      </div>
+                      <div class="col">
+                        <strong><label for="telp">Telepon/Whatsapp</label></strong>
+                        <input type="number" class="form-control" name="telp" placeholder="Masukkan nomor telepon" required>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <strong><label for="berangkat">Berangkat</label></strong>
+                    <select name="berangkat" class="form-control" required>
                       <option disabled selected value>Dari</option>
                         <option value="Jakarta">Jakarta</option>
                         <option value="Bogor">Bogor</option>
                         <option value="Depok">Depok</option>
                         <option value="Tangerang">Tangerang</option>
+                        <option value="Tangerang Selatan">Tangerang Selatan</option>
                         <option value="Bekasi">Bekasi</option>
-                        <option value="Banten">Banten</option>
-                              
-
+                        <option value="Cilegon">Cilegon</option>
+                        <option value="Serang">Serang</option>
+                        <option value="Pandeglang">Pandeglang</option>
+                        <option value="Lebak">Lebak</option>
                     </select>
                   </div>
                   <div class="form-group">
-                    <label for="tujuan">Tujuan</label>
-                    <input type="" class="form-control" id="tujuan" placeholder="Ke">
+                    <strong><label for="alamatjemput">Alamat Lengkap Keberangkatan</label></strong>
+                    <textarea class="form-control" name="almt_berangkat" placeholder="Masukkan alamat secara lengkap" rows="3" required=""></textarea>
+                  </div>
+                  <div class="form-group">
+                    <strong><label for="tujuan">Tujuan</label></strong>
+                    <select name="tujuan" class="form-control" required>
+                      <option disabled selected value>Ke</option>
+                        <option value="wisata_rekreasi">Wisata/Rekreasi</option>
+                        <option value="wisata_religi">Wisata Religi</option>
+                        <option value="gathering">Gathering/Group Travelling</option>
+                        <option value="ziarah_walisongo">Ziarah Walisongo</option>
+                        <option value="study_tour">Study Tour</option>
+                        <option value="dll">Dll~</option>
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <strong><label for="alamattujuan">Alamat Lengkap Tujuan</label></strong>
+                    <textarea class="form-control" name="almt_tujuan" placeholder="Masukkan alamat secara lengkap" rows="3" required=""></textarea>
+                  </div>
+                  <div class="form-group">
+                    <strong><label for="tipe_bus">Tipe Bus</label></strong>
+                    <select name="tipe_bus" class="form-control" required>
+                      <option disabled selected value>Pilih tipe bus & kapasitas kursi</option>
+                        <option value="vip">VIP CLASS JB3+ HDD 59seat 2-3</option>
+                        <option value="executive">EXECUTIVE CLASS JB3+ HDD 47seat 2-2</option>
+                        <option value="super_executive">SUPER EXECUTIVE CLASS JB3+ SHD 32seat 2-2</option>
+                        <option value="super_luxury">SUPER LUXURY CLASS LEGAXY SR2 XHD PRIME 22seat 2-1</option>
+                    </select>
                   </div>
                   <div class="form-group">
                     <div class="form-row">
                       <div class="col">
-                        <label class="label">Tgl Mulai:</label>
-                        <input class="form-control" type="text" name="mulai" placeholder="mm/dd/yyyy" id="input-start">
+                        <strong><label for="label">Tgl Mulai:</label></strong>
+                        <input class="form-control" type="date" id="tgl_mulai" name="tgl_mulai">
                       </div>
                       <div class="col">
-                        <label class="label">Jam Mulai:</label>
-                        <input type="time" class="form-control" name="waktu1" placeholder="--:--">
+                        <strong><label class="label">Jam Mulai:</label></strong>
+                        <input type="time" class="form-control" name="jam_mulai">
                       </div>
                     </div>
                   </div>
                   <div class="form-group">
                     <div class="form-row">
                       <div class="col">
-                        <label class="label">Tgl Selesai:</label>
-                        <input class="form-control" type="text" name="Selesai" placeholder="mm/dd/yyyy" id="input-end">
+                        <strong><label class="label">Tgl Selesai:</label></strong>
+                        <input class="form-control" type="date" name="tgl_selesai">
                       </div>
                       <div class="col">
-                        <label class="label">Jam Selesai:</label>
-                        <input type="time" class="form-control" name="waktu2" placeholder="--:--">
+                        <strong><label class="label">Jam Selesai:</label></strong>
+                        <input type="time" class="form-control" name="jam_selesai">
                       </div>
                     </div>
                   </div>
                   <div class="col">
-
-
-                        <center><button type="submit" name="login" class="btn btn-success">Search</button></center>
-
+                        <center><button type="submit" name="pemesanan" class="btn btn-warning"><strong>MELANJUTKAN RESERVASI</strong></button></center>
                   </div>
                 </form>
               </div>

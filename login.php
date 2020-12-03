@@ -13,23 +13,23 @@
 
     if($count > 0){
       $data = mysqli_fetch_assoc($query);
-			
-			if($data['level'] == 1){
-				$_SESSION['email'] = $email_address;
-				$_SESSION['role'] = "admin";
-				
-				echo "<script>alert('Login Admin Berhasil !');window.location.href = 'halaman/admin/dashboard.php';</script>";
-			}else if($data['level'] == 0){
-				$_SESSION['email'] = $email_address;
-				$_SESSION['role'] = "pemesan";
+      
+      if($data['level'] == 1){
+        $_SESSION['email'] = $email_address;
+        $_SESSION['role'] = "admin";
+        
+        echo "<script>alert('Login Admin Berhasil !');window.location.href = 'halaman/admin/dashboard.php';</script>";
+      }else if($data['level'] == 0){
+        $_SESSION['email'] = $email_address;
+        $_SESSION['role'] = "pemesan";
 
-				echo "<script>alert('Login Pemesan Berhasil !');window.location.href = 'halaman/pemesan/dashboard.php';</script>";
-			}else{
-				header("location:index.php?pesan=Kesalahan Proses Gagal");
-			}
+        echo "<script>alert('Login Pemesan Berhasil !');window.location.href = 'halaman/pemesan/dashboard.php';</script>";
+      }else{
+        header("location:index.php?pesan=Kesalahan Proses Gagal");
+      }
     }else{
-			$errorData = "Data tidak terdaftar !";
-		}
+      $errorData = "Data tidak terdaftar !";
+    }
 
   }
 
@@ -41,7 +41,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Dewi Permata Trans | Login</title>
+  <title>PO. Dewi Permata | Login</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -102,7 +102,7 @@
                       <input type="password" class="form-control" id="password" name="password" required>
                     </div>
                     <button type="submit" name="login" class="btn btn-success btn-block">Login</button>
-                    <a href="register.php" class="btn btn-primary btn-block">Registrasi</a>
+                    <a href="register.php" class="btn btn-primary btn-block">Daftar Disini</a>
                   </form>
               </div>
             </div>

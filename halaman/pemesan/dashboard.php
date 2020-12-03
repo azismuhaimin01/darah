@@ -1,6 +1,9 @@
 <?php
-  $halaman="beranda";
+$halaman="home";
+
 session_start();
+include ("../../koneksi.php");
+
 
 ?>
 <!DOCTYPE html>
@@ -8,7 +11,7 @@ session_start();
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard Pemesan</title>
+    <title>PO. Dewi Permata | Home</title>
 	<meta content="" name="description">
 	<meta content="" name="keywords">
 
@@ -41,11 +44,18 @@ session_start();
 	<section id="user" class="d-flex align-items-center">
 
 		<div class="container">
-      		<div class="section-title">
-        		<div class="col-lg-6 d-flex flex-column justify-content-center pt-4 pt-lg-0 order-2 order-lg-1" data-aos="fade-up" data-aos-delay="200">
-    			<h1>SELAMAT DATANG <?= $_SESSION['email']; ?></h1>
-    		</div>
-    	</div>
+      <div class="row">
+        <div class="col-lg-6 d-flex flex-column justify-content-center pt-4 pt-lg-0 order-2 order-lg-1"data-aos="fade-up" data-aos-delay="200">
+          <h1>Selamat Datang <?= $_SESSION['email']; ?></h1>
+          <h3><strong>Sistem Informasi Pemesanan Bus Pariwisata</strong></h3>
+          <h2>PO. DEWI PERMATA</h2>
+          <h4>Lakukan Pemesanan Bus Pariwisata Tanpa Harus Datang Ke Lokasi.</h4>
+        </div>
+        <div class="col-lg-6 order-1 order-lg-2 hero-img" data-aos="zoom-out" data-aos-delay="200">
+          <img src="../../assets/img/undraw_online_connection_6778.svg" class="img-fluid animated" alt="">
+        </div>
+      </div>
+    </div>
 	</section>
 
   <!-- ======= Footer ======= -->

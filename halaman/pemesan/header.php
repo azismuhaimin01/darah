@@ -13,12 +13,14 @@
 
       <nav class="nav-menu d-none d-lg-block">
         <ul>
-          <li class="<?= $halaman=="beranda" ? 'active' : ''; ?>"><a href="dashboard.php">Beranda</a></li>
+          <li class="<?= $halaman=="home" ? 'active' : ''; ?>"><a href="dashboard.php">Home</a></li>
+          <li class="<?= $halaman=="tipe_armada" ? 'active' : ''; ?>"><a href="armada.php">Tipe Armada</a></li>
           <li class="<?= $halaman=="pemesanan" ? 'active' : '' ?>"><a href="pemesanan.php">Pemesanan</a></li>
           <li class="<?= $halaman=="daftartunggu" ? 'active' : '' ?>"><a href="daftartunggu.php">Daftar Tunggu</a></li>
-          <li class="<?= $halaman=="kontak" ? 'active' : '' ?>"><a href="kontak.php">Kontak Kami</a></li>
+          <li class="<?= $halaman=="about" ? 'active' : '' ?>"><a href="about.php">Tentang Kami</a></li>
           <li class="<?= $halaman=="keluar"? 'active' : ''?>"><a href="../../index.php" class="btn btn-danger">Keluar</a></li>
         </ul>
+
       </nav><!-- .nav-menu -->
 
     </div>

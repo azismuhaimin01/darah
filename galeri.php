@@ -8,7 +8,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Dewi Permata Trans | Galeri</title>
+  <title>PO. Dewi Permata | Galeri</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -53,7 +53,6 @@
 
         <div class="section-title">
           <h1>GALERI KAMI</h1>
-          <p> Bukti PO. DEWI PERMATA TRANS sudah berpengalaman mengantarkan pelanggan untuk berwisata ke beberapa penjuru tempat yang sangat indah </p>
         </div>
 
         <div class="row galeri-container" data-aos="fade-up" data-aos-delay="200">

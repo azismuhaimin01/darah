@@ -8,7 +8,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Dewi Permata Trans | Home</title>
+  <title>PO. Dewi Permata | Home</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -46,15 +46,15 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-6 d-flex flex-column justify-content-center pt-4 pt-lg-0 order-2 order-lg-1" data-aos="fade-up" data-aos-delay="200">
-          <h1>Sistem Informasi Penyewaan Bus Pariwisata</h1>
-          <h2>PO. DEWI PERMATA TRANS</h2>
+          <h1>Sistem Informasi Pemesanan Bus Pariwisata</h1>
+          <h2>PO. DEWI PERMATA</h2>
           <h3>Ayo daftar dan bergabung menjadi pelanggan untuk mendapatkan penawaran harga terbaik serta jaminan kepuasan pelayanan yang menyeluruh.</h3>
           <div class="d-lg-flex">
             <a href="register.php" class="btn btn-primary">DAFTAR SEGERA</a>
             <a href="login.php" class="btn btn-success ml-2">LOGIN</a>
           </div>
         </div>
-        <div class="col-lg-6 order-1 order-lg-2 hero-img" data-aos="zoom-in" data-aos-delay="200">
+        <div class="col-lg-6 order-1 order-lg-2 hero-img" data-aos="zoom-out" data-aos-delay="200">
           <img src="assets/img/AAA.png" class="img-fluid animated" alt="">
         </div>
       </div>

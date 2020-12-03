@@ -8,7 +8,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Dewi Permata Trans | Armada Bus</title>
+  <title>PO. Dewi Permata | Armada Bus</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -54,55 +54,50 @@
 
         <div class="section-title">
           <h1>Layanan Armada</h1>
-          <p>Kami menyediakan berbagai bus, mulai dari medium class hingga luxury class </p>
+          <p>Kami menyediakan bus pariwisata dengan berbagai fasilitas yang mempuni, mulai dari vip class hingga luxury class </p>
         </div>
 
         <div class="row team-container">
-
           <div class="col-lg-6">
             <div class="member d-flex align-items-start" data-aos="zoom-in" data-aos-delay="100">
               <div class="pic"><img src="assets/img/team/B.png" class="img-fluid" alt=""></div>
               <div class="member-info">
-                <h4>Medium Bus</h4>
-                <span>31 seat dengan konfigurasi 2-2</span>
-                <p>Jetbus 3+ MD Buatan Adi Putro</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-6 mt-4 mt-lg-0">
-            <div class="member d-flex align-items-start" data-aos="zoom-in" data-aos-delay="200">
-              <div class="pic"><img src="assets/img/team/shd1.png" class="img-fluid" alt=""></div>
-              <div class="member-info">
-                <h4>Vip Big Bus</h4>
+                <h4>VIP CLASS</h4>
                 <span>59 seat dengan konfigurasi 2-3</span>
                 <p>Jetbus 3+ HDD Buatan Adi Putro</p>
               </div>
             </div>
           </div>
-
+          <div class="col-lg-6 mt-4 mt-lg-0">
+            <div class="member d-flex align-items-start" data-aos="zoom-in" data-aos-delay="200">
+              <div class="pic"><img src="assets/img/team/shd1.png" class="img-fluid" alt=""></div>
+              <div class="member-info">
+                <h4>EXECUTIVE CLASS</h4>
+                <span>47 seat dengan konfigurasi 2-2</span>
+                <p>Jetbus 3+ HDD Buatan Adi Putro</p>
+              </div>
+            </div>
+          </div>
           <div class="col-lg-6 mt-4">
             <div class="member d-flex align-items-start" data-aos="zoom-in" data-aos-delay="300">
               <div class="pic"><img src="assets/img/team/shd.png" class="img-fluid" alt=""></div>
               <div class="member-info">
-                <h4>Executive Big Bus</h4>
-                <span>47 seat dengan konfigurasi 2-2</span>
+                <h4>SUPER EXECUTIVE CLASS</h4>
+                <span>32 seat dengan konfigurasi 2-2</span>
                 <p>Jetbus 3+ SHD Buatan Adi Putro</p>
               </div>
             </div>
           </div>
-
           <div class="col-lg-6 mt-4">
             <div class="member d-flex align-items-start" data-aos="zoom-in" data-aos-delay="400">
               <div class="pic"><img src="assets/img/team/xhd.png" class="img-fluid" alt=""></div>
               <div class="member-info">
-                <h4>Luxury Class</h4>
-                <span>24 seat dengan konfigurasi 2-1</span>
+                <h4>SUPER LUXURY CLASS</h4>
+                <span>22 seat dengan konfigurasi 2-1</span>
                 <p>SR2 XHD Prime Buatan Laksana</p>
               </div>
             </div>
           </div>
-
         </div>
 
       </div>

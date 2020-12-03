@@ -1,5 +1,8 @@
 <?php
-  $halaman="kontak";
+  $halaman="about";
+
+  session_start();
+  include("../../koneksi.php");
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -8,7 +11,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Dewi Permata Trans | Kontak</title>
+  <title>PO. Dewi Permata | Tentang Kami</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -52,8 +55,7 @@
       <div class="container" data-aos="fade-up">
 
         <div class="section-title">
-          <h1>KONTAK KAMI</h1>
-          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+          <h1>TENTANG KAMI</h1>
         </div>
 
         <div class="row">
@@ -85,34 +87,22 @@
 
           <div class="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch">
             <form action="forms/contact.php" method="post" role="form" class="php-email-form">
-              <div class="form-row">
-                <div class="form-group col-md-6">
-                  <label for="name">Nama Lengkap</label>
-                  <input type="text" name="name" class="form-control" id="name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
-                  <div class="validate"></div>
+                <div class="about">
+                  <h4>TENTANG KAMI</h4>
+                    <p>PO. DEWI PERMATA TRANS adalah perusahaan otobus pariwisata asal Tangerang, yang bergerak dalam layanan perjalanan pariwisata domestik dalam negeri khususnya wilayah pulau Jawa, Sumatra, Bali dan Lombok. Dengan armada bus baru yang berteknologi Air Suspension serta desain karoseri dan fasilitas sangat baik untuk kenyamanan para pelanggan.</p>
                 </div>
-                <div class="form-group col-md-6">
-                  <label for="name">Email</label>
-                  <input type="email" class="form-control" name="email" id="email" data-rule="email" data-msg="Please enter a valid email" />
-                  <div class="validate"></div>
+                <div class="visi">
+                  <h4>VISI</h4>
+                    <p>Menyediakan armada dengan fasilitas yang terjaga kebersihannya, Memberikan layanan pariwisata terbaik dengan harga terjangkau</p>
                 </div>
-              </div>
-              <div class="form-group">
-                <label for="name">Judul</label>
-                <input type="text" class="form-control" name="subject" id="subject" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
-                <div class="validate"></div>
-              </div>
-              <div class="form-group">
-                <label for="name">Pesan</label>
-                <textarea class="form-control" name="message" rows="10" data-rule="required" data-msg="Please write something for us"></textarea>
-                <div class="validate"></div>
-              </div>
-              <div class="mb-3">
-                <div class="loading">Loading</div>
-                <div class="error-message"></div>
-                <div class="sent-message">Your message has been sent. Thank you!</div>
-              </div>
-              <div class="text-center"><button type="submit">Send Message</button></div>
+                <div class="misi">
+                  <h4>MISI</h4>
+                    <p>Menjadi PO (Perusahaan Otobus) yang terdepan dengan mengedepankan pelayanan yang prima sebagai prioritas utama serta didukung oleh kru terbaik, pengemudi maupun helper yang profesional dan berpengalaman.</p>
+                </div>
+                <div class="moto">
+                  <h4>MOTO</h4>
+                  <p>Peduli Kepada Pelanggan, Rendah Diri & Melayani.</p>
+                </div>
             </form>
           </div>
 
